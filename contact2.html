@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <form id="contactForm">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <input type="text" name="Subject" placeholder="Subject" required>
+        <textarea name="Message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            fetch('https://script.google.com/macros/s/AKfycbwqyISkJvQnY4lUEm66uOCbKZ0zdCPm8oB5ZFdymnfZqfVjjvHElxWdznYy90Q0u6DbNA/exec', { // Replace with your Google Apps Script URL
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Message sent successfully!');
+            })
+            .catch(error => {
+                alert('Error sending message: ' + error);
+            });
+        });
+    </script>
+</body>
+</html>
