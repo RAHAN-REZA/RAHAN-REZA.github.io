@@ -27,6 +27,8 @@ href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,40
  
   <!-- Main CSS File --> 
   <link href="assets/css/main.css" rel="stylesheet"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
  
   <!-- ======================================================= 
   * Template Name: Personal 
@@ -135,7 +137,7 @@ exciting data science projects. I am always open to discussing new opportunities
                 <div class="social-links"> 
                   <a href="https://github.com/RAHAN-REZA/RAHAN-REZA.github.io" target="_blank"><i 
 class="bi bi-github"></i></a> 
-                  <a href="https://medium.com/@rayanraazz1"><i class="bi bi-medium"></i></a> 
+                  <!-- <a href="https://medium.com/@rayanraazz1"><i class="bi bi-medium"></i></a>  -->
                   <a href="https://www.instagram.com/reza.in_/"><i class="bi bi-instagram"></i></a> 
                   <a href="skype:Rahan Reza chat"><i class="bi bi-skype"></i></a> 
                   <a href="https://www.linkedin.com/in/rahan-reza/"><i class="bi bi-linkedin"></i></a> 
@@ -147,7 +149,7 @@ class="bi bi-github"></i></a>
         </div> 
  
         <form id="submit-form" action="" method="post" class="php-email-form" data-aos="fade-up" 
-data-aos-delay="600"> 
+            data-aos-delay="600"> 
           <div class="row gy-4"> 
  
             <div class="col-md-6"> 
@@ -164,7 +166,7 @@ data-aos-delay="600">
  
             <div class="col-md-12"> 
               <textarea class="form-control" name="message" rows="6" placeholder="Message" 
-required=""></textarea> 
+              required=""></textarea> 
             </div> 
  
             <div class="col-md-12 text-center"> 
@@ -190,9 +192,10 @@ required=""></textarea>
       <p>Empowering businesses and individuals through data-driven insights and innovation. Always 
 eager to learn, grow, and collaborate..</p> 
       <div class="social-links d-flex justify-content-center"> 
-        <a href="https://github.com/RAHAN-REZA/RAHAN-REZA.github.io" target="_blank"><i class="bi bi
-github"></i></a> 
-        <a href="https://medium.com/@rayanraazz1"><i class="bi bi-medium"></i></a> 
+        <a href="https://github.com/RAHAN-REZA/RAHAN-REZA.github.io" target="_blank" aria-label="GitHub">
+          <i class="bi bi-github"></i>
+        </a>        
+        
         <a href="https://www.instagram.com/reza.in_/"><i class="bi bi-instagram"></i></a> 
         <a href="skype:Rahan Reza chat"><i class="bi bi-skype"></i></a> 
         <a href="https://www.linkedin.com/in/rahan-reza/"><i class="bi bi-linkedin"></i></a> 
@@ -206,10 +209,10 @@ class="bi bi-arrow-up-short"></i></a>
 <div id="preloader"></div> 
 <script>
   $("#submit-form").submit((e)=>{
-    console.log("ddddddddddddddddd")
+    // console.log("ddddddddddddddddd")
       e.preventDefault()
       $.ajax({
-          url:"https://script.google.com/macros/s/AKfycbwqyISkJvQnY4lUEm66uOCbKZ0zdCPm8oB5ZFdymnfZqfVjjvHElxWdznYy90Q0u6DbNA/exec",
+          url:"https://script.google.com/macros/s/AKfycbz-oA3I_0Wd1jKzoN6ysSRkrZrPitQn1z-O9bEfc78xPELOFEzWiYvFjmVOmTYSV4V-_g/exec",
           data:$("#submit-form").serialize(),
           method:"post",
           success:function (response){
